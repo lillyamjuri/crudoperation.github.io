@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud-operation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1 class="text-center fw-bold text-danger p-3">STUDENT REGISTRATION FORM</h1>
+
+        <div class="row">
+            <div class="col-md-12 bg-white shadow-lg p-4">
+                <div class="d-flex bg-primary p-2 w-100 justify-content-between align-items-center ">
+                    <div>
+                        <h1 class="text-white fw-bold">Register now!</h1>
+                    </div>
+                    <div>
+
+
+                        <button class="btn p-0 m-0 btn-light">
+                            <input type="search" class="search" placeholder="search"><i class="  fa fa-search "></i></button>
+                        <button class="btn btn-success add-btn fw-bold  " data-bs-toggle="modal" data-bs-target="#myModal"><i
+                                class="fa fa-plus"></i>Register</button>
+                        <button class="btn delete-all-btn btn-danger fw-bold"><i class="fa fa-trash"></i>Delete All</button>
+
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <table class="table table-striped text-center">
+                            <thead>
+                                <tr>
+                                    <th class="fw-bold">S.no</th>
+                                    <th class="fw-bold">profile</th>
+                                    <th class="fw-bold">Name</th>
+                                    <th class="fw-bold">admin-date</th>
+                                    <th class="fw-bold">Email</th>
+                                    <th class="fw-bold">Degree</th>
+                                    <th class="fw-bold">Mobile number</th>
+                                    <th class="fw-bold">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="reg-list">
+                              
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- css using bootstrap-5 -->
+
+        <div class="modal animate__animated animate__zoomIn" id="myModal">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h3 class="fw-bold text-white ">Register now!</h3>
+                        <button class="btn-close  bg-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="model-body">
+                        <form class="register-form">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Name:</span>
+                                <input type="text" class="form-control" required>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">admin-date:</span>
+                                <input type="date" class="form-control" required>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Email:</span>
+                                <input type="email" class="form-control" required>
+                            </div>
+                        
+                            <div class="input-group mb-3">
+                            <span class="input-group-text">Degree: </span>
+                            <select type="" class="form-control" required>
+                                <option value="btech">BTech</option>
+                                <option value="bba">BBA</option>
+                                <option value="bsc">BSc</option>
+                                <option value="bca">BCA</option>
+                                <option value="bcom">B.Com</option>
+                                <option value="bcom-cas">BCom(CAS)</option>
+                                <option value="ba">BA</option>
+                            </select>
+                        </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Mobile-number:</span>
+                                <input type="number" class="form-control" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Profile:</span>
+                                <input type="file" class="form-control" required>
+                            </div>
+                            <div class="input-group  w-100 d-flex justify-content-end align-items-center">
+                                <button disabled class="btn fw-bold btn-danger mx-1 " type="button">update</button>
+                                <button class="btn fw-bold  btn-primary " type="submit">submit</button>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
